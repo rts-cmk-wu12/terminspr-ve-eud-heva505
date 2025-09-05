@@ -1,0 +1,29 @@
+{
+  "name": "terminspr-ve-eud-heva505",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build --turbopack",
+    "start": "next start",
+    "lint": "eslint",
+    "dev:web": "next dev --turbopack",
+    "api": "npm --prefix server/landrup-dans-api run dev",
+    "dev:all": "concurrently -n API,WEB -c auto \"npm:api\" \"wait-on tcp:127.0.0.1:4000 && npm:dev:web\"",
+    "postinstall": "npm --prefix server/landrup-dans-api install"
+  },
+  "dependencies": {
+    "next": "15.5.2",
+    "react": "19.1.0",
+    "react-dom": "19.1.0"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4",
+    "concurrently": "^9.2.1",
+    "eslint": "^9",
+    "eslint-config-next": "15.5.2",
+    "tailwindcss": "^4",
+    "wait-on": "^8.0.4"
+  }
+}
