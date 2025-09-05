@@ -2,7 +2,7 @@
 import * as api from "./api";
 
 export const getActivities = (...args) =>
-  api // API-kald / نداء API
+  api // API-kald
     .getActivities(...args);
 export const getActivity = (...args) => api.getActivity(...args);
 export const login = (...args) => api.login(...args);

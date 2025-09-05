@@ -1,4 +1,3 @@
-
 "use client";
 // Importer / استيراد
 import Link from "next/link";
@@ -43,18 +42,18 @@ function SmartImage({
   imgProps = {},
 }) {
   const placeholder = // Memo / حفظ محاسبات
-useMemo(
-    () =>
-      makeActivityPlaceholder(fallbackText || alt || "A", {
-        w: width,
-        h: height,
-      }),
-    [fallbackText, alt, width, height]
-  );
+    useMemo(
+      () =>
+        makeActivityPlaceholder(fallbackText || alt || "A", {
+          w: width,
+          h: height,
+        }),
+      [fallbackText, alt, width, height]
+    );
   const [apiImage, setCurrentSrc] = // Tilstand / حالة
-useState(src || placeholder);
+    useState(src || placeholder);
   // UI
-return (
+  return (
     <img
       src={apiImage}
       alt={alt || "image"}
